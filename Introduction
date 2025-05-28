@@ -1,0 +1,12 @@
+
+C++ programs are stored in files which usually have the file extension
+.cpp
+which simply stands for "C Plus Plus"
+The terminal is where the code will be printed out onto it.
+Hello World!
+int main() {
+
+  std::cout<< "Hello Wrold!\n";
+}
+
+\n adds a new line after "Hello World!" when printed, meaning that the cursor moves to the next line, making your output look neat and ready for more text below. 
