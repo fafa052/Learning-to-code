@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 body {
@@ -70,16 +71,21 @@ p {
   left: 0;
   right: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.7rem var(--pad);
-  padding-top: max(0.7rem, env(safe-area-inset-top));
+  padding: 0.55rem var(--pad);
+  padding-top: max(0.55rem, env(safe-area-inset-top));
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
   transform: translateY(-120%);
   transition: transform 0.35s ease;
+}
+
+.mini-bar__inner {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .mini-bar.is-visible {
@@ -447,6 +453,7 @@ p {
   border-radius: 16px;
   font-weight: 600;
   padding: 0.7rem 1rem;
+  white-space: nowrap;
 }
 
 .btn--primary {

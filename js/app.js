@@ -215,7 +215,7 @@
     const button = $("#copy-link");
     try {
       await navigator.clipboard.writeText(window.location.href);
-      button.textContent = "Enlace copiado";
+      button.textContent = "Copiado";
     } catch (error) {
       window.prompt("Copia este enlace:", window.location.href);
     }
