@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B4F9C" />
+    <title>Tarjeta digital del doctor</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+        background: #f4f8ff;
+        color: #10233f;
+      }
+      .hero {
+        min-height: 100dvh;
+        padding: 48px 20px 96px;
+        background: linear-gradient(165deg, #072e63, #0b4f9c 50%, #1a7ae0);
+        color: white;
+        text-align: center;
+      }
+      .hero img {
+        width: 210px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 28px;
+        border: 6px solid white;
+      }
+      h1 { margin: 16px 0 6px; font-size: 1.9rem; }
+      .hero p { margin: 4px 0; }
+      .sheet {
+        max-width: 430px;
+        margin: -24px auto 0;
+        background: #f4f8ff;
+        border-radius: 28px 28px 0 0;
+        padding: 28px 20px 120px;
+      }
+      a.boton {
+        display: block;
+        background: white;
+        color: #073a7a;
+        text-decoration: none;
+        padding: 16px;
+        border-radius: 18px;
+        margin: 10px 0;
+        min-height: 56px;
+        font-weight: 600;
+        box-shadow: 0 10px 30px rgba(7, 58, 122, 0.12);
+      }
+      .abajo {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+        background: white;
+      }
+      .abajo a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      .llamar { background: #0b4f9c; }
+      .whatsapp { background: #25d366; }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <img src="../assets/doctor.png" alt="Foto del doctor" />
+      <h1>Dr. Andrés Navarro</h1>
+      <p>Medicina Interna</p>
+      <p>Desliza para ver más</p>
+    </section>
+
+    <main class="sheet">
+      <h2>Contacto</h2>
+      <a class="boton" href="tel:+525512345678">Llamar 55 1234 5678</a>
+      <a class="boton" href="https://wa.me/525512345678">WhatsApp</a>
+      <a class="boton" href="mailto:contacto@consultorionavarro.mx">Correo</a>
+
+      <h2>Redes</h2>
+      <a class="boton" href="https://www.instagram.com/dr.andresnavarro">Instagram</a>
+      <a class="boton" href="https://www.doctoralia.com.mx/">Doctoralia</a>
+
+      <h2>Sobre el doctor</h2>
+      <p>Atención cercana, clara y de confianza. Consulta de medicina interna y seguimiento de enfermedades crónicas.</p>
+    </main>
+
+    <nav class="abajo">
+      <a class="llamar" href="tel:+525512345678">Llamar</a>
+      <a class="whatsapp" href="https://wa.me/525512345678">WhatsApp</a>
+    </nav>
+  </body>
+</html>

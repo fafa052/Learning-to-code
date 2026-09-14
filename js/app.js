@@ -105,6 +105,8 @@
   const waHref = `https://wa.me/${card.whatsapp}?text=${encodeURIComponent(card.whatsappMessage)}`;
 
   $(".mini-bar__call").href = callHref;
+  $(".thumb-bar__call").href = callHref;
+  $(".thumb-bar__wa").href = waHref;
   $("#maps-link").href = card.mapsUrl;
 
   $("#contact-actions").innerHTML = [

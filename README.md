@@ -4,6 +4,8 @@ Página web para compartir la tarjeta de un médico por enlace (WhatsApp, correo
 
 No es un directorio. Quien no tenga el enlace no llega a una lista de médicos. Si dejas `allowSearchIndexing: true` en `js/config.js`, Google puede mostrar la página cuando alguien busque el nombre del doctor.
 
+**Para armarla tú desde cero**, como una actividad de clase (pensada para celular), sigue: [actividad-desde-cero.md](actividad-desde-cero.md).
+
 **Para publicarla y que salga en Google**, sigue la guía: [como-salir-en-google.md](como-salir-en-google.md).
 
 ## Cómo personalizarla
