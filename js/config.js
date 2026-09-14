@@ -17,6 +17,13 @@ window.DOCTOR_CARD = {
   // false = solo entra quien tenga el enlace (no se indexa)
   allowSearchIndexing: true,
 
+  // Enlace público de la página (GitHub Pages). Cámbialo si usas otro hosting.
+  publicUrl: "https://fafa052.github.io/Learning-to-code/",
+
+  // Pega aquí el código de Google Search Console (Paso 5 de la guía).
+  // Ejemplo: "AbCdEfGhIjKlMnOpQrStUvWxYz"
+  googleSiteVerification: "",
+
   name: "Dr. Andrés Navarro",
   specialty: "Medicina Interna",
   credentials: "Cédula profesional 12345678",

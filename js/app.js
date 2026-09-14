@@ -56,13 +56,32 @@
     </a>`;
   }
 
+  const pageUrl = (card.publicUrl || window.location.href).replace(/\/?$/, "/");
+  const photoUrl = new URL(card.photo, pageUrl).href;
+
   document.title = card.seoTitle;
   setMeta("description", card.seoDescription);
   setMeta("robots", card.allowSearchIndexing ? "index,follow" : "noindex,nofollow");
   setMeta("og:title", card.seoTitle, "og:title");
   setMeta("og:description", card.seoDescription, "og:description");
-  setMeta("og:image", new URL(card.photo, window.location.href).href, "og:image");
+  setMeta("og:image", photoUrl, "og:image");
+  setMeta("og:url", pageUrl, "og:url");
   setMeta("og:type", "profile", "og:type");
+  setMeta("twitter:card", "summary_large_image");
+  setMeta("twitter:title", card.seoTitle);
+  setMeta("twitter:description", card.seoDescription);
+
+  if (card.googleSiteVerification) {
+    setMeta("google-site-verification", card.googleSiteVerification);
+  }
+
+  let canonical = document.head.querySelector("link[rel='canonical']");
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+  canonical.href = pageUrl;
 
   $$(".portrait__img, .mini-bar__photo").forEach((img) => {
     img.src = card.photo;
@@ -126,10 +145,10 @@
     "@type": "Physician",
     name: card.name,
     medicalSpecialty: card.specialty,
-    image: new URL(card.photo, window.location.href).href,
+    image: photoUrl,
     telephone: card.phone,
     email: card.email,
-    url: window.location.href,
+    url: pageUrl,
     address: {
       "@type": "PostalAddress",
       streetAddress: card.address,
@@ -175,7 +194,7 @@
       `ORG:${card.clinicName}`,
       `TEL;TYPE=CELL:${card.phone}`,
       `EMAIL:${card.email}`,
-      `URL:${window.location.href}`,
+      `URL:${pageUrl}`,
       `ADR;TYPE=WORK:;;${card.address};;;;`,
       `NOTE:${card.tagline}`,
       "END:VCARD",
@@ -196,28 +215,28 @@
     const payload = {
       title: card.name,
       text: `${card.name} · ${card.specialty}`,
-      url: window.location.href,
+      url: pageUrl,
     };
     if (navigator.share) {
       try {
         await navigator.share(payload);
       } catch (error) {
         if (error && error.name !== "AbortError") {
-          window.prompt("Copia este enlace:", window.location.href);
+          window.prompt("Copia este enlace:", pageUrl);
         }
       }
       return;
     }
-    window.prompt("Copia este enlace:", window.location.href);
+    window.prompt("Copia este enlace:", pageUrl);
   });
 
   $("#copy-link").addEventListener("click", async () => {
     const button = $("#copy-link");
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(pageUrl);
       button.textContent = "Copiado";
     } catch (error) {
-      window.prompt("Copia este enlace:", window.location.href);
+      window.prompt("Copia este enlace:", pageUrl);
     }
     setTimeout(() => {
       button.textContent = "Copiar enlace";
@@ -226,6 +245,6 @@
 
   const qr = $("#qr-image");
   qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&data=${encodeURIComponent(
-    window.location.href
+    pageUrl
   )}`;
 })();
