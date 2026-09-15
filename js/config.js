@@ -24,8 +24,8 @@ window.DOCTOR_CARD = {
 
   phone: "+524461179518",
   phoneDisplay: "446 117 9518",
-  mobile: "+52552240904",
-  mobileDisplay: "55 224 0904",
+  mobile: "+525532240904",
+  mobileDisplay: "55 3224 0904",
   whatsapp: "524461179518",
   whatsappMessage:
     "Hola doctor, vi su tarjeta digital y me gustaría agendar una cita.",
