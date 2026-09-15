@@ -1,29 +1,29 @@
 /**
- * TARJETA DIGITAL DEL DOCTOR
- * ==========================
- * Edita SOLO este archivo para personalizar la página.
- * Luego vuelve a abrir index.html (o sube los archivos otra vez).
+ * TARJETA DIGITAL — SOLO CAMBIA ESTE ARCHIVO
+ * ==========================================
  *
- * La foto va en: assets/doctor.png
- * Reemplaza ese archivo por la foto real del doctor (cuadrada o vertical).
+ * 1) Sustituye los textos de ejemplo por los datos reales del doctor.
+ * 2) Reemplaza la foto: assets/doctor.png (deja el mismo nombre).
+ * 3) Guarda y vuelve a abrir index.html para ver los cambios.
+ *
+ * No hace falta tocar index.html, css/ ni js/app.js.
  */
 window.DOCTOR_CARD = {
-  // Cómo aparece en Google si alguien busca al doctor
+  // --- Lo que sale en Google ---
   seoTitle: "Dr. Andrés Navarro · Medicina Interna | Tarjeta digital",
   seoDescription:
     "Tarjeta digital del Dr. Andrés Navarro, médico internista. Teléfono, Instagram, Doctoralia y datos de consultorio.",
 
-  // true  = Google puede encontrar la página si buscan el nombre
-  // false = solo entra quien tenga el enlace (no se indexa)
+  // true = Google puede mostrar la página si buscan el nombre
   allowSearchIndexing: true,
 
-  // Enlace público de la página (GitHub Pages). Cámbialo si usas otro hosting.
+  // Enlace público cuando esté en GitHub Pages
   publicUrl: "https://fafa052.github.io/Learning-to-code/",
 
-  // Pega aquí el código de Google Search Console (Paso 5 de la guía).
-  // Ejemplo: "AbCdEfGhIjKlMnOpQrStUvWxYz"
+  // Lo pegas cuando Google Search Console te dé el código de verificación
   googleSiteVerification: "",
 
+  // --- Datos que se ven en la tarjeta ---
   name: "Dr. Andrés Navarro",
   specialty: "Medicina Interna",
   credentials: "Cédula profesional 12345678",

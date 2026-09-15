@@ -1,29 +1,19 @@
 # Tarjeta digital del doctor
 
-Página web para compartir la tarjeta de un médico por enlace (WhatsApp, correo o código QR) en lugar de tarjetas de papel.
+La página **ya está lista**. Tú solo cambias los datos y la foto. Luego la publicas para que Google pueda encontrarla.
 
-No es un directorio. Quien no tenga el enlace no llega a una lista de médicos. Si dejas `allowSearchIndexing: true` en `js/config.js`, Google puede mostrar la página cuando alguien busque el nombre del doctor.
+## 1. Cambia la información
 
-**Para armarla tú desde cero**, como una actividad de clase (pensada para celular), sigue: [actividad-desde-cero.md](actividad-desde-cero.md).
+Abre **un solo archivo**: `js/config.js`
 
-**Para publicarla y que salga en Google**, sigue la guía: [como-salir-en-google.md](como-salir-en-google.md).
+Ahí cambias nombre, especialidad, teléfono, WhatsApp, Instagram, Doctoralia, consultorio y lo que quieres que salga en Google (`seoTitle` y `seoDescription`).
 
-## Cómo personalizarla
+La foto: sustituye el archivo `assets/doctor.png` por la foto real (mismo nombre).
 
-1. Abre `js/config.js` y cambia nombre, especialidad, teléfono, Instagram, Doctoralia, consultorio y biografía.
-2. Reemplaza `assets/doctor.png` por la foto real del doctor.
-3. Si no quieres que Google la indexe, pon `allowSearchIndexing: false`.
+Deja `allowSearchIndexing: true` si quieres que se pueda buscar en Google.
 
-## Cómo verla en tu computadora
+## 2. Publícala y pídele a Google que la indexe
 
-Abre `index.html` en el navegador, o desde la carpeta del proyecto:
+Google no ve archivos en tu computadora. Primero la página tiene que estar en internet (GitHub Pages) y después se avisa a Google Search Console.
 
-```bash
-python3 -m http.server 8080
-```
-
-Luego visita `http://localhost:8080`.
-
-## Cómo compartirla
-
-Sube estos archivos a GitHub Pages, Netlify o cualquier hosting estático. El enlace de esa web es la tarjeta. El doctor puede mandarlo o mostrar el código QR que aparece al final de la página.
+Pasos detallados: [como-salir-en-google.md](como-salir-en-google.md)
