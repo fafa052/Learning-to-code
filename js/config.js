@@ -36,8 +36,8 @@ window.DOCTOR_CARD = {
   doctoralia:
     "https://www.doctoralia.com.mx/javier-arean-jimenez-rodriguez/urologo/santiago-de-queretaro",
   doctoraliaLabel: "Ver perfil en Doctoralia",
-  website: "https://www.areanurologia.com/",
-  websiteLabel: "areanurologia.com",
+  website: "https://www.areanurologia.com/Urologo-en-queretaro",
+  websiteLabel: "Urólogo en Querétaro",
 
   clinicName: "Hospital Ángeles Centro Sur",
   address: "Consultorio 1225, piso 12. Blvd. Bernardo Quintana Arrioja 9670, Santiago de Querétaro, Qro.",
