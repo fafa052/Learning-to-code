@@ -18,6 +18,15 @@ python3 -m http.server 8080
 3. En Chrome entra a: `http://localhost:8080`
 4. Para verla como celular: pulsa `F12` → icono de teléfono → iPhone.
 
+Si la terminal dice `Address already in use`, **no está rota**. Significa que el servidor ya está abierto. No vuelvas a escribir el comando: solo entra a `http://localhost:8080` y recarga con **Ctrl + Shift + R**.
+
+Si quieres apagarlo y arrancarlo de nuevo, en otra terminal:
+
+```bash
+fuser -k 8080/tcp
+python3 -m http.server 8080
+```
+
 **Opción C**  
 Da doble clic a `index.html`. A veces la foto o los botones fallan así; si pasa, usa la opción B.
 
