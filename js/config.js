@@ -1,64 +1,59 @@
 /**
- * TARJETA DIGITAL — SOLO CAMBIA ESTE ARCHIVO
- * ==========================================
- *
- * 1) Sustituye los textos de ejemplo por los datos reales del doctor.
- * 2) Reemplaza la foto: assets/doctor.png (deja el mismo nombre).
- * 3) Guarda y vuelve a abrir index.html para ver los cambios.
- *
- * No hace falta tocar index.html, css/ ni js/app.js.
+ * DATOS DEL DR. JAVIER AREÁN — ya están puestos.
+ * Si más adelante cambias algo, edita este archivo, guarda
+ * y recarga la página con Ctrl+Shift+R (para no usar la versión vieja).
  */
 window.DOCTOR_CARD = {
-  // --- Lo que sale en Google ---
-  seoTitle: "Dr. Andrés Navarro · Medicina Interna | Tarjeta digital",
+  seoTitle: "Dr. Javier Areán Jiménez Rodríguez · Urólogo en Querétaro | Tarjeta digital",
   seoDescription:
-    "Tarjeta digital del Dr. Andrés Navarro, médico internista. Teléfono, Instagram, Doctoralia y datos de consultorio.",
+    "Urólogo en Hospital Ángeles Centro Sur, consultorio 1225. Cédula 5897245, especialidad 8475876. Teléfono, WhatsApp e Instagram @urologiaqueretaro.",
 
-  // true = Google puede mostrar la página si buscan el nombre
   allowSearchIndexing: true,
-
-  // Enlace público cuando esté en GitHub Pages
   publicUrl: "https://fafa052.github.io/Learning-to-code/",
-
-  // Lo pegas cuando Google Search Console te dé el código de verificación
   googleSiteVerification: "",
 
-  // --- Datos que se ven en la tarjeta ---
-  name: "Dr. Andrés Navarro",
-  specialty: "Medicina Interna",
-  credentials: "Cédula profesional 12345678",
-  tagline: "Atención cercana, clara y de confianza.",
-  photo: "assets/doctor.png",
-  photoAlt: "Retrato profesional del Dr. Andrés Navarro",
+  name: "Dr. Javier Areán Jiménez Rodríguez",
+  specialty: "Urólogo",
+  credentials: "Cédula profesional 5897245 · Cédula de especialidad 8475876",
+  tagline: "Urología y cirugía de mínima invasión",
+  photo: "assets/doctor.jpg",
+  photoAlt: "Dr. Javier Areán Jiménez Rodríguez, urólogo",
+  logo: "assets/logo.png",
+  logoAlt: "Urología y cirugía de mínima invasión",
+  hospitalPhoto: "assets/hospital.png",
 
-  phone: "+525512345678",
-  phoneDisplay: "55 1234 5678",
-  whatsapp: "525512345678",
+  phone: "+524461179518",
+  phoneDisplay: "446 117 9518",
+  mobile: "+52552240904",
+  mobileDisplay: "55 224 0904",
+  whatsapp: "524461179518",
   whatsappMessage:
     "Hola doctor, vi su tarjeta digital y me gustaría agendar una cita.",
-  email: "contacto@consultorionavarro.mx",
+  email: "j_arean@hotmail.com",
 
-  instagram: "https://www.instagram.com/dr.andresnavarro",
-  instagramHandle: "@dr.andresnavarro",
-  doctoralia: "https://www.doctoralia.com.mx/",
+  instagram: "https://www.instagram.com/urologiaqueretaro/",
+  instagramHandle: "@urologiaqueretaro",
+  doctoralia:
+    "https://www.doctoralia.com.mx/javier-arean-jimenez-rodriguez/urologo/santiago-de-queretaro",
   doctoraliaLabel: "Ver perfil en Doctoralia",
+  website: "https://www.areanurologia.com/",
+  websiteLabel: "areanurologia.com",
 
-  clinicName: "Consultorio Médico Navarro",
-  address: "Av. Paseo de la Reforma 222, Piso 8, Juárez, Ciudad de México",
+  clinicName: "Hospital Ángeles Centro Sur",
+  address: "Consultorio 1225, piso 12. Blvd. Bernardo Quintana Arrioja 9670, Santiago de Querétaro, Qro.",
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Paseo+de+la+Reforma+222+Ciudad+de+Mexico",
+    "https://www.google.com/maps/search/?api=1&query=Hospital+Angeles+Centro+Sur+consultorio+1225+Queretaro",
   hours: [
-    { days: "Lunes a viernes", time: "9:00 – 14:00 y 16:00 – 19:00" },
-    { days: "Sábado", time: "9:00 – 13:00" },
-    { days: "Domingo", time: "Cerrado" },
+    { days: "Citas", time: "Teléfono, celular o WhatsApp" },
   ],
 
-  bio: "El Dr. Andrés Navarro se dedica a la medicina interna con un enfoque humano y preventivo. Acompaña a sus pacientes en el diagnóstico, el seguimiento de enfermedades crónicas y las decisiones de salud del día a día, con tiempo para explicar cada paso.",
+  bio: "Urólogo certificado por el Consejo Nacional Mexicano de Urología. Formación en la UNAM y especialidad en el Centro Médico Nacional Siglo XXI. Atiende enfermedades urinarias de mujeres y hombres, con énfasis en cirugía de mínima invasión.",
 
   services: [
-    "Consulta de medicina interna",
-    "Chequeo médico general",
-    "Seguimiento de hipertensión y diabetes",
-    "Orientación preventiva",
+    "Cirugía de mínima invasión",
+    "Cálculos urinarios",
+    "Cáncer urológico",
+    "Próstata",
+    "Vasectomía",
   ],
 };

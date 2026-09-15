@@ -88,6 +88,12 @@
     img.alt = card.photoAlt;
   });
 
+  const logo = $(".hero__logo");
+  if (logo && card.logo) {
+    logo.src = card.logo;
+    logo.alt = card.logoAlt || "";
+  }
+
   $$(".hero__name, .mini-bar__name").forEach((el) => {
     el.textContent = card.name;
   });
@@ -102,6 +108,7 @@
   $("#bio-text").textContent = card.bio;
 
   const callHref = `tel:${card.phone}`;
+  const mobileHref = card.mobile ? `tel:${card.mobile}` : "";
   const waHref = `https://wa.me/${card.whatsapp}?text=${encodeURIComponent(card.whatsappMessage)}`;
 
   $(".mini-bar__call").href = callHref;
@@ -109,13 +116,19 @@
   $(".thumb-bar__wa").href = waHref;
   $("#maps-link").href = card.mapsUrl;
 
-  $("#contact-actions").innerHTML = [
+  const contactCards = [
     actionCard(callHref, "phone", "Teléfono", card.phoneDisplay),
+  ];
+  if (mobileHref) {
+    contactCards.push(actionCard(mobileHref, "phone", "Celular", card.mobileDisplay));
+  }
+  contactCards.push(
     actionCard(waHref, "whatsapp", "WhatsApp", "Agendar por mensaje", 'target="_blank" rel="noopener noreferrer"'),
-    actionCard(`mailto:${card.email}`, "mail", "Correo", card.email),
-  ].join("");
+    actionCard(`mailto:${card.email}`, "mail", "Correo", card.email)
+  );
+  $("#contact-actions").innerHTML = contactCards.join("");
 
-  $("#social-links").innerHTML = [
+  const socialCards = [
     actionCard(
       card.instagram,
       "instagram",
@@ -130,7 +143,19 @@
       card.doctoraliaLabel,
       'target="_blank" rel="noopener noreferrer"'
     ),
-  ].join("");
+  ];
+  if (card.website) {
+    socialCards.push(
+      actionCard(
+        card.website,
+        "doctoralia",
+        "Sitio web",
+        card.websiteLabel || card.website,
+        'target="_blank" rel="noopener noreferrer"'
+      )
+    );
+  }
+  $("#social-links").innerHTML = socialCards.join("");
 
   $("#services-list").innerHTML = card.services
     .map((item) => `<li>${escapeHtml(item)}</li>`)
@@ -155,7 +180,7 @@
       "@type": "PostalAddress",
       streetAddress: card.address,
     },
-    sameAs: [card.instagram, card.doctoralia],
+    sameAs: [card.instagram, card.doctoralia, card.website].filter(Boolean),
   };
   const schemaTag = document.createElement("script");
   schemaTag.type = "application/ld+json";
@@ -194,13 +219,14 @@
       `FN:${card.name}`,
       `TITLE:${card.specialty}`,
       `ORG:${card.clinicName}`,
-      `TEL;TYPE=CELL:${card.phone}`,
+      `TEL;TYPE=WORK:${card.phone}`,
+      card.mobile ? `TEL;TYPE=CELL:${card.mobile}` : "",
       `EMAIL:${card.email}`,
       `URL:${pageUrl}`,
       `ADR;TYPE=WORK:;;${card.address};;;;`,
       `NOTE:${card.tagline}`,
       "END:VCARD",
-    ];
+    ].filter(Boolean);
     return new Blob([lines.join("\r\n")], { type: "text/vcard;charset=utf-8" });
   }
 
