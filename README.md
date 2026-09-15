@@ -1,19 +1,44 @@
 # Tarjeta digital del doctor
 
-La página **ya está lista**. Tú solo cambias los datos y la foto. Luego la publicas para que Google pueda encontrarla.
+La página ya está lista, con los datos del Dr. Javier Areán y los colores de su marca.
 
-## 1. Cambia la información
+## Cómo abrirla para verla
 
-Abre **un solo archivo**: `js/config.js`
+**Opción A (la más fácil)**  
+En Cursor o VS Code, abre el archivo `index.html` y pulsa clic derecho → **Open with Live Server** / **Show Preview**, si lo tienes. Si no:
 
-Ahí cambias nombre, especialidad, teléfono, WhatsApp, Instagram, Doctoralia, consultorio y lo que quieres que salga en Google (`seoTitle` y `seoDescription`).
+**Opción B**  
+1. En la carpeta del proyecto, abre una terminal.
+2. Escribe:
 
-La foto: sustituye el archivo `assets/doctor.png` por la foto real (mismo nombre).
+```bash
+python3 -m http.server 8080
+```
 
-Deja `allowSearchIndexing: true` si quieres que se pueda buscar en Google.
+3. En Chrome entra a: `http://localhost:8080`
+4. Para verla como celular: pulsa `F12` → icono de teléfono → iPhone.
 
-## 2. Publícala y pídele a Google que la indexe
+**Opción C**  
+Da doble clic a `index.html`. A veces la foto o los botones fallan así; si pasa, usa la opción B.
 
-Google no ve archivos en tu computadora. Primero la página tiene que estar en internet (GitHub Pages) y después se avisa a Google Search Console.
+Después de cada cambio, recarga con **Ctrl + Shift + R** (no solo F5), para que no se quede la versión vieja.
 
-Pasos detallados: [como-salir-en-google.md](como-salir-en-google.md)
+## Cómo hacerle cambios
+
+| Qué quieres cambiar | Dónde |
+| --- | --- |
+| Nombre, teléfonos, WhatsApp, Instagram, correo, consultorio | `js/config.js` |
+| Foto del doctor | `assets/doctor.jpg` (mismo nombre) |
+| Logo | `assets/logo.png` |
+| Colores | `css/styles.css` (arriba, las variables `--navy`, `--blue`, `--sky`) |
+
+1. Abre el archivo.
+2. Cambia el texto (respeta las comillas).
+3. Guarda (`Ctrl + S`).
+4. Vuelve a Chrome y recarga con **Ctrl + Shift + R**.
+
+No edites el nombre “a mano” sobre la página en el navegador: eso no se guarda. Siempre en `js/config.js`.
+
+## Publicar y Google
+
+Cuando la veas bien, publícala en GitHub Pages y pídele a Google que la indexe: [como-salir-en-google.md](como-salir-en-google.md)
