@@ -9,7 +9,7 @@ window.DOCTOR_CARD = {
     "Urólogo en Hospital Ángeles Centro Sur, consultorio 1225. Cédula 5897245, especialidad 8475876. Teléfono, WhatsApp e Instagram @urologiaqueretaro.",
 
   allowSearchIndexing: true,
-  publicUrl: "https://fafa052.github.io/Learning-to-code/",
+  publicUrl: "https://fafa052.github.io/tarjeta-dr-arean/",
   googleSiteVerification: "",
 
   name: "Dr. Javier Areán Jiménez Rodríguez",

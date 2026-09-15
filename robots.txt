@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fafa052.github.io/Learning-to-code/sitemap.xml
+Sitemap: https://fafa052.github.io/tarjeta-dr-arean/sitemap.xml
