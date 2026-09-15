@@ -36,10 +36,13 @@ Después de cada cambio, recarga con **Ctrl + Shift + R** (no solo F5), para que
 
 | Qué quieres cambiar | Dónde |
 | --- | --- |
-| Nombre, teléfonos, WhatsApp, Instagram, correo, consultorio | `js/config.js` |
+| Palabras: nombre, teléfonos, WhatsApp, Instagram, correo, consultorio, biografía | `js/config.js` |
+| Tipo de letra del **nombre** | `css/styles.css` → `--serif` |
+| Tipo de letra del **resto** | `css/styles.css` → `--font` |
+| Tamaño del nombre | `css/styles.css` → `--name-size` (prueba `1.8rem` o `2.4rem`) |
 | Foto del doctor | `assets/doctor.jpg` (mismo nombre) |
 | Logo | `assets/logo.png` |
-| Colores | `css/styles.css` (arriba, las variables `--navy`, `--blue`, `--sky`) |
+| Colores | `css/styles.css` → `--navy`, `--blue`, `--sky` |
 
 1. Abre el archivo.
 2. Cambia el texto (respeta las comillas).
@@ -48,6 +51,15 @@ Después de cada cambio, recarga con **Ctrl + Shift + R** (no solo F5), para que
 
 No edites el nombre “a mano” sobre la página en el navegador: eso no se guarda. Siempre en `js/config.js`.
 
-## Publicar y Google
+## Publicar en internet (para compartir el enlace)
 
-Cuando la veas bien, publícala en GitHub Pages y pídele a Google que la indexe: [como-salir-en-google.md](como-salir-en-google.md)
+1. En GitHub abre el pull request y pulsa **Merge pull request**: https://github.com/fafa052/Learning-to-code/pull/1
+2. Entra al repositorio **Learning-to-code** → **Settings** (arriba) → **Pages** (a la izquierda).
+3. Source: **Deploy from a branch**.
+4. Branch: **main**. Folder: **/ (root)**.
+5. **Save**.
+6. Espera 1 o 2 minutos. GitHub muestra un enlace como:
+
+   `https://fafa052.github.io/Learning-to-code/`
+
+Ese ya es el enlace de la tarjeta. Lo puedes mandar por WhatsApp. Google todavía no la busca sola: eso se pide después en Search Console ([como-salir-en-google.md](como-salir-en-google.md)).
