@@ -12,8 +12,8 @@
   --shadow: 0 18px 50px rgba(17, 38, 121, 0.16);
   --radius: 22px;
   /* Letra: --serif es el NOMBRE, --font es el resto */
-  --font: "Outfit", system-ui, sans-serif;
-  --serif: "Fraunces", Georgia, serif;
+  --font: "Montserrat", sans-serif;
+  --serif: "Montserrat", sans-serif;
   --name-size: clamp(1.55rem, 6.4vw, 2.15rem);
   --pad: clamp(1.15rem, 4vw, 1.6rem);
   --card-width: 430px;
