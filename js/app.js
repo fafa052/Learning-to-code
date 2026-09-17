@@ -226,7 +226,7 @@
       `EMAIL;TYPE=INTERNET:${card.email}`,
       `URL:${pageUrl}`,
       `ADR;TYPE=WORK:;;${card.address};;;;`,
-      `NOTE:${card.clinicName}. ${card.address}`,
+      `NOTE:Hospital Ángeles Centro Sur, consultorio 1225, piso 12`,
       "END:VCARD",
     ].filter(Boolean);
     return new Blob([lines.join("\r\n")], { type: "text/vcard;charset=utf-8" });

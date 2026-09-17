@@ -13,7 +13,7 @@ window.DOCTOR_CARD = {
   googleSiteVerification: "",
 
   name: "Dr. Javier Areán Jiménez Rodríguez",
-  contactName: "Dr. Javier Areán Urólogo",
+  contactName: "Dr. Javier Areán, Urólogo, Hospital Ángeles Centro Sur, consultorio 1225, piso 12",
   specialty: "Urólogo",
   credentials: "Cédula profesional 5897245 · Cédula de especialidad 8475876",
   tagline: "Urología y cirugía de mínima invasión",
