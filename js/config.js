@@ -13,6 +13,7 @@ window.DOCTOR_CARD = {
   googleSiteVerification: "",
 
   name: "Dr. Javier Areán Jiménez Rodríguez",
+  contactName: "Dr. Javier Areán Urólogo",
   specialty: "Urólogo",
   credentials: "Cédula profesional 5897245 · Cédula de especialidad 8475876",
   tagline: "Urología y cirugía de mínima invasión",

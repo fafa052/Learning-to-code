@@ -213,18 +213,20 @@
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
   function vcardFile() {
+    const savedName = card.contactName || `${card.name} ${card.specialty}`;
     const lines = [
       "BEGIN:VCARD",
       "VERSION:3.0",
-      `FN:${card.name}`,
+      `N:Areán;Javier;;Dr.;`,
+      `FN:${savedName}`,
       `TITLE:${card.specialty}`,
       `ORG:${card.clinicName}`,
-      `TEL;TYPE=WORK:${card.phone}`,
-      card.mobile ? `TEL;TYPE=CELL:${card.mobile}` : "",
-      `EMAIL:${card.email}`,
+      `TEL;TYPE=WORK,VOICE:${card.phone}`,
+      card.mobile ? `TEL;TYPE=CELL,VOICE:${card.mobile}` : "",
+      `EMAIL;TYPE=INTERNET:${card.email}`,
       `URL:${pageUrl}`,
       `ADR;TYPE=WORK:;;${card.address};;;;`,
-      `NOTE:${card.tagline}`,
+      `NOTE:${card.clinicName}. ${card.address}`,
       "END:VCARD",
     ].filter(Boolean);
     return new Blob([lines.join("\r\n")], { type: "text/vcard;charset=utf-8" });
@@ -233,8 +235,9 @@
   $("#save-contact").addEventListener("click", () => {
     const url = URL.createObjectURL(vcardFile());
     const a = document.createElement("a");
+    const savedName = card.contactName || card.name;
     a.href = url;
-    a.download = `${card.name.replace(/\s+/g, "-")}.vcf`;
+    a.download = `${savedName.replace(/\s+/g, "-")}.vcf`;
     a.click();
     URL.revokeObjectURL(url);
   });
